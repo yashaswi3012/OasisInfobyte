@@ -1,0 +1,352 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.navbar.sticky {
+    padding: 10px 0;
+    background: rgb(96, 12, 198);
+}
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a {
+    color: #333;
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.navbar .logo a span {
+    color: rgb(96, 12, 198);
+}
+.navbar .menu {
+    display: flex;
+}
+.navbar .menu li {
+    list-style: none;
+}
+.navbar .menu li a {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar.sticky .menu li a {
+    color: #fff;
+}
+.navbar .menu li a:hover {
+    color:rgb(96, 12, 198);
+}
+
+/* Responsive Menu Button */
+.menu-btn {
+    display: none;
+    color: #333;
+    font-size: 2.3rem;
+    cursor: pointer;
+}
+
+/* Scroll Up Button */
+.scroll-up-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    height: 45px;
+    width: 45px;
+    background: rgb(96, 12, 198)n;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    font-size: 2.4rem;
+    display: none;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+    display: block;
+}
+.scroll-up-btn:hover {
+    background: rgb(96, 12, 198);
+}
+
+/* Section Base Styles */
+section {
+    padding: 100px 0;
+}
+.max-width {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: auto;
+}
+section .title {
+    text-align: center;
+    font-size: 3.6rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #333;
+}
+section .title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: rgb(96, 12, 198);
+    margin: 8px auto 0;
+}
+
+/* Home Section */
+.home {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15rem;
+    min-height: 100vh;
+    background: #f4f4f4;
+}
+.home h3 {
+    font-size: 2.5rem;
+    color: rgb(96, 12, 198);
+}
+.home h1 {
+    font-size: 5rem;
+    color: #333;
+}
+.home h1 span {
+    color: rgb(96, 12, 198);
+}
+.home p {
+    font-size: 2rem;
+    color: #555;
+    margin: 1rem 0;
+}
+
+/* About Section */
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .left {
+    flex: 1 1 40%;
+}
+.about .about-content .left img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+.about .about-content .right {
+    flex: 1 1 55%;
+}
+.about .about-content .right p {
+    text-align: justify;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #555;
+}
+.about .about-content .right a {
+    display: inline-block;
+    background: rgb(96, 12, 198);
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover {
+    background: #fff;
+    color: rgb(96, 12, 198);
+    border: 2px solid rgb(96, 12, 198);
+}
+
+/* Education Section */
+.education .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.education .box-container .box {
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    border-left: 4px solid rgb(96, 12, 198);
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.education .box-container .box h3 {
+    font-size: 2rem;
+    color: #333;
+    margin: 10px 0;
+}
+.education .box-container .box span,
+.education .box-container .box p {
+    font-size: 1.6rem;
+    color: #777;
+}
+
+/* Certification Section */
+.certification .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.certification .box-container .box {
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    border-left: 4px solid rgb(96, 12, 198);
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.certification .box-container .box h3 {
+    font-size: 2rem;
+    color: #333;
+    margin: 10px 0;
+}
+.certification .box-container .box span,
+.certification .box-container .box p {
+    font-size: 1.6rem;
+    color: #777;
+}
+
+/* Contact Section */
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.contact .contact-content .info {
+    flex: 1 1 40%;
+}
+.contact .contact-content .info h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+.contact .contact-content .info h3 i {
+    color: rgb(96, 12, 198);
+    padding-right: 8px;
+}
+.contact .contact-content form {
+    flex: 1 1 50%;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact .contact-content form .box {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    font-size: 1.6rem;
+    color: #333;
+}
+.contact .contact-content form .message {
+    height: 150px;
+    resize: none;
+}
+.contact .contact-content form .btn {
+    background: rgb(96, 12, 198);
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+.contact .contact-content form .btn:hover {
+    background: rgb(96, 12, 198);
+}
+
+/* Media Queries */
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+    .navbar .menu-btn {
+        display: block;
+    }
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+    }
+    .navbar .menu.active {
+        display: flex;
+    }
+    .home {
+        padding: 0 2rem;
+    }
+    .about .about-content .left,
+    .about .about-content .right,
+    .education .box-container .box,
+    .certification .box-container .box {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width:400px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+
